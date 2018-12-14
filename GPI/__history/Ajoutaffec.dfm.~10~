@@ -1,0 +1,139 @@
+object Ajoutaffecation: TAjoutaffecation
+  Left = 0
+  Top = 0
+  Caption = 'Etablissement d'#39'une affectation'
+  ClientHeight = 410
+  ClientWidth = 759
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 312
+    Top = 24
+    Width = 94
+    Height = 13
+    Caption = 'Date d'#39'affectation :'
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 264
+    Top = 56
+    Width = 186
+    Height = 21
+    Date = 43198.737543796300000000
+    Time = 43198.737543796300000000
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 32
+    Top = 112
+    Width = 273
+    Height = 273
+    Caption = 'Mat'#233'riel :'
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 24
+      Top = 36
+      Width = 59
+      Height = 13
+      Caption = 'ID Mat'#233'riel :'
+    end
+    object Label3: TLabel
+      Left = 24
+      Top = 96
+      Width = 84
+      Height = 13
+      Caption = 'ID Bon Livraison :'
+    end
+    object Label4: TLabel
+      Left = 24
+      Top = 128
+      Width = 57
+      Height = 13
+      Caption = 'R'#233'f'#233'rence :'
+    end
+    object Label5: TLabel
+      Left = 24
+      Top = 160
+      Width = 43
+      Height = 13
+      Caption = 'Marque :'
+    end
+    object Label6: TLabel
+      Left = 24
+      Top = 192
+      Width = 72
+      Height = 13
+      Caption = 'Type mat'#233'riel :'
+    end
+    object Label7: TLabel
+      Left = 24
+      Top = 225
+      Width = 101
+      Height = 13
+      Caption = 'Description materiel :'
+    end
+    object Edit1: TEdit
+      Left = 104
+      Top = 33
+      Width = 129
+      Height = 21
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 416
+    Top = 112
+    Width = 305
+    Height = 273
+    Caption = 'Employer :'
+    TabOrder = 2
+    object Label8: TLabel
+      Left = 48
+      Top = 36
+      Width = 58
+      Height = 13
+      Caption = 'ID Employer'
+    end
+    object Label9: TLabel
+      Left = 48
+      Top = 76
+      Width = 31
+      Height = 13
+      Caption = 'Label8'
+    end
+    object Label10: TLabel
+      Left = 48
+      Top = 116
+      Width = 31
+      Height = 13
+      Caption = 'Label8'
+    end
+    object Label11: TLabel
+      Left = 48
+      Top = 160
+      Width = 31
+      Height = 13
+      Caption = 'Label8'
+    end
+    object Label12: TLabel
+      Left = 48
+      Top = 200
+      Width = 31
+      Height = 13
+      Caption = 'Label8'
+    end
+    object Label13: TLabel
+      Left = 48
+      Top = 232
+      Width = 31
+      Height = 13
+      Caption = 'Label8'
+    end
+  end
+end

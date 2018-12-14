@@ -1,0 +1,56 @@
+unit Siege;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids,
+  Data.DB, Data.Win.ADODB;
+
+type
+  TForm28 = class(TForm)
+    DBGrid1: TDBGrid;
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    ADOTable1ID_Siege: TAutoIncField;
+    ADOTable1Type_Siege: TStringField;
+    ADOTable1Mail_Siege: TStringField;
+    ADOTable1Lieu_Siege: TStringField;
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form28: TForm28;
+
+implementation
+
+{$R *.dfm}
+
+uses ASiege, MSiege;
+
+procedure TForm28.Button2Click(Sender: TObject);
+begin
+Form29.showmodal;
+end;
+
+procedure TForm28.Button3Click(Sender: TObject);
+begin
+Form30.showmodal;
+end;
+
+end.

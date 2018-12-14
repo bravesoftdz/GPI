@@ -1,0 +1,59 @@
+unit AEntreperiseMaintenance;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.ExtDlgs;
+
+type
+  TForm35 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Label2: TLabel;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Label3: TLabel;
+    Edit4: TEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    DBImage1: TDBImage;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    OpenPictureDialog1: TOpenPictureDialog;
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form35: TForm35;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm35.Button2Click(Sender: TObject);
+begin
+form34.adotable1.Insert;
+form34.ADOTable1Type_Siege.value:=combobox1.text;
+form34.ADOTable1Mail_Siege.value:=edit3.text;
+form34.ADOTable1Lieu_Siege.value:=edit4.text;
+form34.adotable1.Post;
+edit1.text:='';
+edit2.text:='';
+edit3.text:='';
+edit4.text:='';
+close;
+end;
+
+procedure TForm35.Button3Click(Sender: TObject);
+begin
+Close;
+end;
+
+end.

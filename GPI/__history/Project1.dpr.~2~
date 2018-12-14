@@ -1,0 +1,48 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Unit1 in 'Unit1.pas' {Form1},
+  Unit17 in 'Unit17.pas' {Changerlemotdepasse},
+  Unit18 in 'Unit18.pas' {Apropos},
+  Unit19 in 'Unit19.pas' {Form19},
+  Ajoutmat in 'Ajoutmat.pas' {MaterielAjouter},
+  Bonlivraison in 'Bonlivraison.pas' {Ajoutbon},
+  Typemat in 'Typemat.pas' {Ajouttype},
+  Ajoutmarque in 'Ajoutmarque.pas' {Marque},
+  Ajoutcara in 'Ajoutcara.pas' {Caracteristique},
+  Modifmat in 'Modifmat.pas' {Modimat},
+  Matériel in 'Matériel.pas' {Employe},
+  Employee in 'Employee.pas' {Employer},
+  Modifemp in 'Modifemp.pas' {ModifierEmp},
+  Fournisseur in 'Fournisseur.pas' {Ajoutfour},
+  Modiffour in 'Modiffour.pas' {Modiffourr},
+  AjoutEntreprise in 'AjoutEntreprise.pas' {AjoutEntr},
+  ModifEntrp in 'ModifEntrp.pas' {Modifentr},
+  Affectation in 'Affectation.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm19, Form19);
+  Application.CreateForm(TChangerlemotdepasse, Changerlemotdepasse);
+  Application.CreateForm(TApropos, Apropos);
+  Application.CreateForm(TMaterielAjouter, MaterielAjouter);
+  Application.CreateForm(TAjoutbon, Ajoutbon);
+  Application.CreateForm(TAjouttype, Ajouttype);
+  Application.CreateForm(TMarque, Marque);
+  Application.CreateForm(TCaracteristique, Caracteristique);
+  Application.CreateForm(TModimat, Modimat);
+  Application.CreateForm(TEmploye, Employe);
+  Application.CreateForm(TEmployer, Employer);
+  Application.CreateForm(TModifierEmp, ModifierEmp);
+  Application.CreateForm(TAjoutfour, Ajoutfour);
+  Application.CreateForm(TModiffourr, Modiffourr);
+  Application.CreateForm(TAjoutEntr, AjoutEntr);
+  Application.CreateForm(TModifentr, Modifentr);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

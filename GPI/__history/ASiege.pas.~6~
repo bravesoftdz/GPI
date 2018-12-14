@@ -1,0 +1,51 @@
+unit ASiege;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm29 = class(TForm)
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    ComboBox1: TComboBox;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form29: TForm29;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm29.Button1Click(Sender: TObject);
+begin
+form28.adotable1.Insert;
+form28.ADOTable1Type_Siege.value:=combobox1.text;
+form28.ADOTable1Mail_Siege.value:=edit3.text;
+form28.ADOTable1Lieu_Siege.value:=edit4.text;
+form28.adotable1.Post;
+edit3.text:='';
+edit4.text:='';
+close;
+end;
+
+procedure TForm29.Button2Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

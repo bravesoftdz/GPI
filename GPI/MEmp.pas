@@ -1,0 +1,81 @@
+unit MEmp;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtDlgs, Data.DB, Data.Win.ADODB,
+  Vcl.Buttons, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.ExtCtrls;
+
+type
+  TForm20 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    DBImage1: TDBImage;
+    Button1: TButton;
+    Button2: TButton;
+    DateTimePicker1: TDateTimePicker;
+    BitBtn1: TBitBtn;
+    OpenPictureDialog1: TOpenPictureDialog;
+    procedure Button2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form20: TForm20;
+
+implementation
+
+{$R *.dfm}
+
+uses Employe;
+
+procedure TForm20.BitBtn1Click(Sender: TObject);
+begin
+OpenPictureDialog1.Execute;
+dbImage1.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+end;
+
+procedure TForm20.Button1Click(Sender: TObject);
+begin
+form2.adotable1.Edit;
+form2.adotable1Nom_Employe.Value:=edit1.Text;
+form2.adotable1Prenom_Employe.Value:=edit2.Text;
+form2.adotable1Tel_Employe.Value:=edit3.Text;
+form2.adotable1Adresse_Employe.Value:=edit4.Text;
+form2.ADOTable1Date_Recrutement.Value:=DateTimePicker1.Date;
+form2.adotable1.Post;
+close;
+end;
+
+procedure TForm20.Button2Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TForm20.FormShow(Sender: TObject);
+begin
+
+edit1.Text:=form2.adotable1Nom_Employe.value;
+edit2.Text:=form2.adotable1Prenom_Employe.Value;
+edit3.Text:=form2.adotable1Tel_Employe.Value;
+edit4.Text:=form2.adotable1Adresse_Employe.Value;
+DateTimePicker1.Date:=form2.adotable1Date_Recrutement.value;
+
+end;
+
+end.

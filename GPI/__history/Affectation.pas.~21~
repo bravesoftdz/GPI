@@ -1,0 +1,71 @@
+unit Affectation;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TAffect = class(TForm)
+    StringGrid1: TStringGrid;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    StringGrid2: TStringGrid;
+    Button1: TButton;
+    GroupBox1: TGroupBox;
+    Edit1: TEdit;
+    Button2: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure RadioButton2Click(Sender: TObject);
+    procedure RadioButton1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Affect: TAffect;
+
+implementation
+
+{$R *.dfm}
+
+procedure TAffect.FormCreate(Sender: TObject);
+begin
+
+
+self.StringGrid2.Cols[0].strings[0]:='ID Employer' ;
+self.StringGrid2.Cols[1].strings[0]:='Nom' ;
+self.StringGrid2.Cols[2].strings[0]:='Prénom';
+self.StringGrid2.Cols[3].Strings[0]:='N° Téléphone';
+self.StringGrid2.Cols[7].strings[0]:='Date recrutement';
+self.StringGrid2.Cols[5].strings[0]:='Nom de poste';
+self.StringGrid2.Cols[6].Strings[0]:='Siege';
+self.StringGrid2.Cols[4].Strings[0]:='Adresse Employer';
+
+self.StringGrid1.Cols[0].strings[0]:='ID Materiel' ;
+self.StringGrid1.Cols[1].strings[0]:='ID Bon Livraison' ;
+self.StringGrid1.Cols[2].strings[0]:='Référence';
+self.StringGrid1.Cols[3].Strings[0]:='Marque';
+self.StringGrid1.Cols[4].strings[0]:='Type matériel';
+self.StringGrid1.Cols[5].strings[0]:='Description materiel';
+end;
+
+procedure TAffect.RadioButton1Click(Sender: TObject);
+begin
+ StringGrid2.Visible:=true;
+ stringgrid1.Visible:=false;
+
+end;
+
+procedure TAffect.RadioButton2Click(Sender: TObject);
+begin
+StringGrid2.Visible:=true;
+stringgrid1.Visible:=false;
+  stringgrid2.Visible:=false;
+  stringgrid1.Visible:=true;
+end;
+
+end.

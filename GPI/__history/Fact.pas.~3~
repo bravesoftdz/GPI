@@ -1,0 +1,44 @@
+unit Fact;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TForm8 = class(TForm)
+    DBGrid1: TDBGrid;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    DBImage1: TDBImage;
+    Button6: TButton;
+    procedure Button6Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form8: TForm8;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm8.Button2Click(Sender: TObject);
+begin
+form9.showmodal;
+end;
+
+procedure TForm8.Button6Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

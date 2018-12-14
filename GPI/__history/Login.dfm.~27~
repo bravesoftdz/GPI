@@ -1,0 +1,113 @@
+object Form27: TForm27
+  Left = 0
+  Top = 0
+  Caption = 'Form27'
+  ClientHeight = 221
+  ClientWidth = 544
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 56
+    Top = 115
+    Width = 86
+    Height = 13
+    Caption = 'Nom d'#39'utilisateur :'
+  end
+  object Label2: TLabel
+    Left = 56
+    Top = 151
+    Width = 71
+    Height = 13
+    Caption = 'Mot de passe :'
+  end
+  object Label3: TLabel
+    Left = 56
+    Top = 51
+    Width = 237
+    Height = 19
+    Caption = 'Veuiller introduire vos login :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 148
+    Top = 112
+    Width = 165
+    Height = 21
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 148
+    Top = 148
+    Width = 165
+    Height = 21
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 368
+    Top = 146
+    Width = 75
+    Height = 25
+    Caption = 'Connecter'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+  object GroupBox1: TGroupBox
+    Left = 342
+    Top = 8
+    Width = 185
+    Height = 105
+    Caption = 'Indication :'
+    TabOrder = 3
+    Visible = False
+    object Label4: TLabel
+      Left = 16
+      Top = 32
+      Width = 47
+      Height = 13
+      Caption = 'Indication'
+    end
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Utilisateur'
+    Left = 56
+    object ADOTable1ID_User: TAutoIncField
+      FieldName = 'ID_User'
+      ReadOnly = True
+    end
+    object ADOTable1Nom_User: TStringField
+      FieldName = 'Nom_User'
+      Size = 32
+    end
+    object ADOTable1Mdp_User: TStringField
+      FieldName = 'Mdp_User'
+      Size = 32
+    end
+    object ADOTable1Indication: TStringField
+      FieldName = 'Indication'
+      Size = 32
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 480
+    Top = 136
+  end
+end

@@ -1,0 +1,32 @@
+unit MType;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.StdCtrls;
+
+type
+  TForm25 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    ADOTable1: TADOTable;
+    ADOTable1ID_Type_Materiel: TAutoIncField;
+    ADOTable1Nom_Type_Materiel: TStringField;
+    ADOTable1Photo_Type_Materiel: TVarBytesField;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form25: TForm25;
+
+implementation
+
+{$R *.dfm}
+
+end.

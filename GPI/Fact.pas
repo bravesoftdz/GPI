@@ -1,0 +1,102 @@
+unit Fact;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.DBCtrls, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Data.DB, Data.Win.ADODB;
+
+type
+  TForm8 = class(TForm)
+    DBGrid1: TDBGrid;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Button5: TButton;
+    DBImage1: TDBImage;
+    Button6: TButton;
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    ADOTable1ID_Facture: TAutoIncField;
+    ADOTable1Num_Facture: TStringField;
+    ADOTable1Date_Facture: TDateField;
+    ADOTable1ID_Fournisseur: TIntegerField;
+    Button1: TButton;
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure Button6Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form8: TForm8;
+
+implementation
+
+{$R *.dfm}
+
+uses AFact, MFact;
+
+procedure TForm8.Button1Click(Sender: TObject);
+begin
+if (ComboBox1.Text='Numéro') then
+     begin
+        if (Length(Edit1.Text) > 0)  then
+          begin
+          if (ADOTable1.Locate('Num_Facture',Edit1.text,[loPartialKey])) then
+          begin
+
+          end
+          else
+            messagedlg('Ce matériel n''existe pas dans la base de donnée', mtError,
+                                    [mbCancel], 0);
+          end;
+    end
+    else if (ComboBox1.Text='Date d''établissement') then
+     begin
+        if (Length(Edit1.Text) > 0)  then
+          begin
+          if (ADOTable1.Locate('Date_facture',Edit1.text,[loPartialKey])) then
+          begin
+
+          end
+          else
+            messagedlg('Ce matériel n''existe pas dans la base de donnée', mtError,
+                                    [mbCancel], 0);
+          end;
+    end;
+end;
+
+procedure TForm8.Button2Click(Sender: TObject);
+begin
+form9.showmodal;
+end;
+
+procedure TForm8.Button3Click(Sender: TObject);
+begin
+Form21.showmodal;
+end;
+
+procedure TForm8.Button4Click(Sender: TObject);
+begin
+if (adotable1.Locate('Num_Facture',adotable1Num_Facture.value,[loPartialKey])) then
+  adotable1.delete;
+
+end;
+
+procedure TForm8.Button6Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

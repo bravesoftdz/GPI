@@ -1,0 +1,189 @@
+object Form31: TForm31
+  Left = 0
+  Top = 0
+  Caption = 'Poste employ'#233
+  ClientHeight = 357
+  ClientWidth = 729
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 45
+    Top = 50
+    Width = 81
+    Height = 13
+    Caption = 'Rechercher par :'
+  end
+  object Label2: TLabel
+    Left = 248
+    Top = 50
+    Width = 41
+    Height = 13
+    Caption = 'Mot cl'#233' :'
+  end
+  object DBGrid1: TDBGrid
+    Left = 32
+    Top = 120
+    Width = 537
+    Height = 201
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_Poste'
+        Title.Caption = 'ID poste'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nom_Poste'
+        Title.Caption = 'Nom poste'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Description_Poste'
+        Title.Caption = 'Description poste'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Grade_Poste'
+        Title.Caption = 'Grade poste'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 103
+        Visible = True
+      end>
+  end
+  object ComboBox1: TComboBox
+    Left = 45
+    Top = 69
+    Width = 145
+    Height = 21
+    TabOrder = 1
+    Text = 'Nom'
+    Items.Strings = (
+      'Nom'
+      'Description'
+      'Grade')
+  end
+  object Edit1: TEdit
+    Left = 248
+    Top = 69
+    Width = 153
+    Height = 21
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 608
+    Top = 120
+    Width = 91
+    Height = 25
+    Caption = 'Ajouter'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 608
+    Top = 151
+    Width = 91
+    Height = 25
+    Caption = 'Modifier'
+    TabOrder = 4
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 608
+    Top = 182
+    Width = 91
+    Height = 25
+    Caption = 'Supprimer'
+    TabOrder = 5
+  end
+  object Button4: TButton
+    Left = 608
+    Top = 213
+    Width = 91
+    Height = 25
+    Caption = 'Imprimer'
+    TabOrder = 6
+  end
+  object Button5: TButton
+    Left = 624
+    Top = 296
+    Width = 75
+    Height = 25
+    Caption = 'Fermer'
+    TabOrder = 7
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 456
+    Top = 67
+    Width = 113
+    Height = 25
+    Caption = 'Recherche'
+    TabOrder = 8
+    OnClick = Button6Click
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 512
+    Top = 16
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Poste_Employe'
+    Left = 592
+    Top = 32
+    object ADOTable1ID_Poste: TAutoIncField
+      FieldName = 'ID_Poste'
+      ReadOnly = True
+    end
+    object ADOTable1Nom_Poste: TStringField
+      FieldName = 'Nom_Poste'
+      Size = 16
+    end
+    object ADOTable1Description_Poste: TStringField
+      FieldName = 'Description_Poste'
+      Size = 32
+    end
+    object ADOTable1Grade_Poste: TStringField
+      FieldName = 'Grade_Poste'
+      Size = 10
+    end
+  end
+end

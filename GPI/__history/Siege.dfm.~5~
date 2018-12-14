@@ -1,0 +1,184 @@
+object Form28: TForm28
+  Left = 0
+  Top = 0
+  Caption = 'Si'#232'ge'
+  ClientHeight = 391
+  ClientWidth = 851
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 80
+    Top = 37
+    Width = 81
+    Height = 13
+    Caption = 'Rechercher par :'
+  end
+  object Label2: TLabel
+    Left = 344
+    Top = 37
+    Width = 41
+    Height = 13
+    Caption = 'Mot cl'#233' :'
+  end
+  object DBGrid1: TDBGrid
+    Left = 32
+    Top = 112
+    Width = 609
+    Height = 222
+    DataSource = DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_Siege'
+        ImeName = 'ID Si'#232'ge'
+        Title.Caption = 'ID Siege'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Type_Siege'
+        ReadOnly = True
+        Title.Caption = 'Type Siege'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Mail_Siege'
+        ReadOnly = True
+        Title.Caption = 'Mail Siege'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Lieu_Siege'
+        ReadOnly = True
+        Title.Caption = 'Lieu Siege'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Visible = True
+      end>
+  end
+  object ComboBox1: TComboBox
+    Left = 80
+    Top = 56
+    Width = 153
+    Height = 21
+    TabOrder = 1
+    Text = 'ID Si'#232'ge'
+  end
+  object Edit1: TEdit
+    Left = 344
+    Top = 56
+    Width = 153
+    Height = 21
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 528
+    Top = 54
+    Width = 98
+    Height = 25
+    Caption = 'Recherche'
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 672
+    Top = 112
+    Width = 114
+    Height = 25
+    Caption = 'Ajouter'
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 672
+    Top = 143
+    Width = 114
+    Height = 25
+    Caption = 'Modifier'
+    TabOrder = 5
+  end
+  object Button4: TButton
+    Left = 672
+    Top = 174
+    Width = 114
+    Height = 25
+    Caption = 'Supprimer'
+    TabOrder = 6
+  end
+  object Button5: TButton
+    Left = 672
+    Top = 205
+    Width = 114
+    Height = 25
+    Caption = 'Imprimer'
+    TabOrder = 7
+  end
+  object Button6: TButton
+    Left = 696
+    Top = 309
+    Width = 90
+    Height = 25
+    Caption = 'Fermer'
+    TabOrder = 8
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    TableName = 'Siege'
+    Left = 688
+    Top = 40
+    object ADOTable1ID_Siege: TAutoIncField
+      FieldName = 'ID_Siege'
+      ReadOnly = True
+    end
+    object ADOTable1Type_Siege: TStringField
+      FieldName = 'Type_Siege'
+      Size = 10
+    end
+    object ADOTable1Mail_Siege: TStringField
+      FieldName = 'Mail_Siege'
+      Size = 32
+    end
+    object ADOTable1Lieu_Siege: TStringField
+      FieldName = 'Lieu_Siege'
+      Size = 32
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 528
+    Top = 352
+  end
+end

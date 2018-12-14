@@ -1,0 +1,174 @@
+object Ajoutaffecation: TAjoutaffecation
+  Left = 0
+  Top = 0
+  Caption = 'Etablissement d'#39'une affectation'
+  ClientHeight = 516
+  ClientWidth = 759
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 319
+    Top = 48
+    Width = 94
+    Height = 13
+    Caption = 'Date d'#39'affectation :'
+  end
+  object Image1: TImage
+    Left = 504
+    Top = 32
+    Width = 161
+    Height = 137
+  end
+  object Image2: TImage
+    Left = 75
+    Top = 32
+    Width = 158
+    Height = 137
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 271
+    Top = 80
+    Width = 186
+    Height = 21
+    Date = 43198.737543796300000000
+    Time = 43198.737543796300000000
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    Left = 32
+    Top = 192
+    Width = 289
+    Height = 273
+    Caption = 'Mat'#233'riel :'
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 24
+      Top = 52
+      Width = 59
+      Height = 13
+      Caption = 'ID Mat'#233'riel :'
+    end
+    object Label3: TLabel
+      Left = 24
+      Top = 96
+      Width = 84
+      Height = 13
+      Caption = 'ID Bon Livraison :'
+    end
+    object Label4: TLabel
+      Left = 24
+      Top = 128
+      Width = 57
+      Height = 13
+      Caption = 'R'#233'f'#233'rence :'
+    end
+    object Label5: TLabel
+      Left = 24
+      Top = 160
+      Width = 43
+      Height = 13
+      Caption = 'Marque :'
+    end
+    object Label6: TLabel
+      Left = 24
+      Top = 192
+      Width = 72
+      Height = 13
+      Caption = 'Type mat'#233'riel :'
+    end
+    object Label7: TLabel
+      Left = 24
+      Top = 225
+      Width = 101
+      Height = 13
+      Caption = 'Description materiel :'
+    end
+    object Edit1: TEdit
+      Left = 104
+      Top = 49
+      Width = 145
+      Height = 21
+      TabOrder = 0
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 400
+    Top = 192
+    Width = 335
+    Height = 273
+    Caption = 'Employer :'
+    TabOrder = 2
+    object Label8: TLabel
+      Left = 48
+      Top = 52
+      Width = 65
+      Height = 13
+      Caption = 'ID Employer :'
+    end
+    object Label9: TLabel
+      Left = 48
+      Top = 96
+      Width = 28
+      Height = 13
+      Caption = 'Nom :'
+    end
+    object Label10: TLabel
+      Left = 48
+      Top = 128
+      Width = 43
+      Height = 13
+      Caption = 'Pr'#233'nom :'
+    end
+    object Label11: TLabel
+      Left = 48
+      Top = 160
+      Width = 72
+      Height = 13
+      Caption = 'N'#176' T'#233'l'#233'phone :'
+    end
+    object Label12: TLabel
+      Left = 48
+      Top = 192
+      Width = 73
+      Height = 13
+      Caption = 'Nom de poste :'
+    end
+    object Label13: TLabel
+      Left = 48
+      Top = 219
+      Width = 33
+      Height = 13
+      Caption = 'Siege :'
+    end
+    object Edit2: TEdit
+      Left = 136
+      Top = 49
+      Width = 145
+      Height = 21
+      TabOrder = 0
+    end
+  end
+  object Button1: TButton
+    Left = 271
+    Top = 136
+    Width = 82
+    Height = 25
+    Caption = 'OK'
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 375
+    Top = 136
+    Width = 82
+    Height = 25
+    Caption = 'Annuler'
+    TabOrder = 4
+  end
+end

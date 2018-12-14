@@ -1,0 +1,62 @@
+unit MMat;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.StdCtrls,
+  Vcl.ComCtrls, Vcl.DBCtrls;
+
+type
+  TForm24 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label6: TLabel;
+    Label9: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    ComboBox3: TComboBox;
+    ComboBox4: TComboBox;
+    ComboBox5: TComboBox;
+    DBImage1: TDBImage;
+    DBImage2: TDBImage;
+    DateTimePicker1: TDateTimePicker;
+    DateTimePicker2: TDateTimePicker;
+    Button1: TButton;
+    Button2: TButton;
+    ADOTable1: TADOTable;
+    ADOTable1ID_Materiel: TAutoIncField;
+    ADOTable1Description_Materiel: TStringField;
+    ADOTable1Modele_Materiel: TStringField;
+    ADOTable1Num_Immo: TStringField;
+    ADOTable1Num_Serie: TStringField;
+    ADOTable1Prix_achat: TStringField;
+    ADOTable1Date_achat: TDateField;
+    ADOTable1Photo_Materiel: TVarBytesField;
+    ADOTable1Date_Fin_Garentie: TDateField;
+    ADOTable1ID_Type_Materiel: TIntegerField;
+    ADOTable1ID_Marque: TIntegerField;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form24: TForm24;
+
+implementation
+
+{$R *.dfm}
+
+end.

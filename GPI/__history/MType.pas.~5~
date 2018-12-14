@@ -1,0 +1,43 @@
+unit MType;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.StdCtrls;
+
+type
+  TForm25 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form25: TForm25;
+
+implementation
+
+{$R *.dfm}
+
+uses Typ;
+
+procedure TForm25.Button2Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TForm25.FormShow(Sender: TObject);
+begin
+
+edit1.Text:=form10.adotable1Nom_Type_Materiel.value;
+end;
+
+end.
